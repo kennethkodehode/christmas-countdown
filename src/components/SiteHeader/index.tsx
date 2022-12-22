@@ -2,6 +2,13 @@ import React from 'react'
 
 import './styles.scss'
 
+/**
+ * Component for displaying the site's header with navigation.
+ * 
+ * @component
+ * @example
+ * <SiteHeader />
+ */
 const SiteHeader: React.FC = () => {
   return (
     <header className="site-header">
