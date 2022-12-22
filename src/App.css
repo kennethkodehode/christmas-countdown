@@ -52,3 +52,11 @@ p {
   color: var(--color-black);
   font-weight: 600;
 }
+
+/* Media */
+img {
+  max-width: 100%;
+  align-content: bottom;
+}
+
+}
