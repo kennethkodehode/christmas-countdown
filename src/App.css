@@ -59,4 +59,13 @@ img {
   align-content: bottom;
 }
 
+/* Utility classes */
+.contain-width {
+  padding-inline: 1rem; 
+}
+
+@media (min-width: 80em) {
+  .contain-width {
+    padding-inline: calc((100% - 78em) / 2);
+  }
 }
