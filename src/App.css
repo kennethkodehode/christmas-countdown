@@ -25,6 +25,11 @@ body {
 }
 
 /* Utility classes */
+p {
+  line-height: 1.5;
+  margin-block: 1rem 2rem;
+}
+
 .font-branding {
   font-family: 'Roboto Slab', sans-serif;
   color: var(--color-red);
