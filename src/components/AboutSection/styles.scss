@@ -1,0 +1,13 @@
+.about {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  &__text {
+    max-width: 80ch;
+    margin-inline: auto;
+  }
+
+  .button + .button {
+    margin-inline-start: 1rem;
+  }
+}
