@@ -53,6 +53,10 @@ p {
   font-weight: 600;
 }
 
+.h2 {
+  font-size: 2.25rem;
+}
+
 /* Media */
 img {
   max-width: 100%;
