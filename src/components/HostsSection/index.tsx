@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-import santaAvatar from '../../assets/krakenimages-liT5AlTmC8I-unsplash.jpg'
+import santaAvatar from '../../assets/avatar.jpg'
 
 import type { IconDefinition } from '@fortawesome/free-brands-svg-icons'
 
