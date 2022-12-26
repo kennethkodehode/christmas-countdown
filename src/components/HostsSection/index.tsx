@@ -15,6 +15,7 @@ interface HostCardProps {
   socialMediaLinks: {
     icon: IconDefinition
     url: string
+    title: string
   }[]
 }
 
@@ -46,9 +47,9 @@ const HostCard: React.FC<HostCardProps> = ({
     <img className="host-card__avatar" src={avatarURL} alt={name} />
     <span className="host-card__name">{name}</span>
     <ul className="host-card__social-links">
-      {socialMediaLinks.map(({ icon, url }) =>
+      {socialMediaLinks.map(({ icon, url, title }) =>
         <li>
-          <a href={url}><FontAwesomeIcon icon={icon}/></a>
+          <a href={url} title={`${name} on ${title}`} target="_blank"><FontAwesomeIcon icon={icon}/></a>
         </li>
       )}
     </ul>
@@ -63,11 +64,11 @@ const HostCard: React.FC<HostCardProps> = ({
  * <HostsSection />
  */
 const HostsSection: React.FC = () => {
-  const name = 'Chris Cringele'
+  const name = 'Chris Cringle'
 
   const socialMediaLinks = [
-    {icon: faInstagram, url: '#'},
-    {icon: faTwitter,   url: '#'}
+    {icon: faTwitter,   url: '#', title: 'Twitter'},
+    {icon: faInstagram, url: '#', title: 'Instagram'}
   ]
   
   return (

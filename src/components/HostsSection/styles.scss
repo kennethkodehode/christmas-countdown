@@ -1,63 +1,86 @@
 .host-card {
-  background-color: var(--color-white);
-  padding: 1rem;
-  border-radius: .125rem;
   display: flex;
   flex-direction: column;
-
+  padding: 1rem;
+  gap: .5rem;
+  background-color: var(--color-white);
+  border-radius: .25rem;
+ 
   &__avatar {
-    border-radius: 50%;
-    aspect-ratio: 1;
     vertical-align: middle;
+    width: calc(100% - .5rem);
+    margin-block-end: .5rem;
+    margin-inline: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
   }
 
   &__name {
-    font-weight: 500;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: 40em) {
+      font-size: 1.125rem;
+    }
   }
 
   &__social-links {
-    list-style: none;
+    display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    gap: 1rem;
+    font-size: 1.5rem;
+    list-style: none;
+
+    a {
+      color: var(--color-red);
+    }
   }
 }
 
 .hosts {
   position: relative;
-  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
   padding-block: 2rem;
+  gap: 1rem;
+  overflow: hidden;
 
   @media (min-width: 40em) {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  @media (min-width: 60em) {
+    gap: 2rem;
+  }
+
   &::before,
   &::after {
-    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     inset: 0;
+    content: '';
   }
 
   &::before {
-    background-image: url('../../assets/kieran-white-SBdmQcW8qag-unsplash.jpg');
     z-index: -2;
+    background-image: url('../../assets/kieran-white-SBdmQcW8qag-unsplash.jpg');
+    background-position: center;
   }
 
   &::after {
+    z-index: -1;
     background-color: var(--color-red);
     opacity: .5;
-    z-index: -1;
   }
 
   .hosts__title {
     grid-column: 1 / 3;
-    color: var(--color-white);
     text-align: center;
+    color: var(--color-white);
 
     @media (min-width: 40em) {
       grid-column: 1 / 5;
