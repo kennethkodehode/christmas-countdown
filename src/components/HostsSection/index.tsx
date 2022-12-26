@@ -24,11 +24,12 @@ interface HostCardProps {
  * 
  * @component
  * @example
+ * import { faInstagram } from '@fortawesome/free-brands-svg-icons'
  * import avatar from '@/assets/avatar.jpg'
  * 
  * const name = 'John Doe'
  * const socialMediaLinks = [
- *  {icon: 'instagram', url: 'https://instagram.com/johndoe'}
+ *  {icon: faInstagram, url: 'https://instagram.com/johndoe', title: 'Instagram'}
  * ]
  * 
  * <HostCard
@@ -48,7 +49,7 @@ const HostCard: React.FC<HostCardProps> = ({
     <span className="host-card__name">{name}</span>
     <ul className="host-card__social-links">
       {socialMediaLinks.map(({ icon, url, title }) =>
-        <li>
+        <li key={title.toLocaleLowerCase().replaceAll(' ', '-')}>
           <a href={url} title={`${name} on ${title}`} target="_blank"><FontAwesomeIcon icon={icon}/></a>
         </li>
       )}
