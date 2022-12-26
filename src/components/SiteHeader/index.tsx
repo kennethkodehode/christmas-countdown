@@ -12,7 +12,7 @@ import './styles.scss'
 const SiteHeader: React.FC = () => {
   return (
     <header className="site-header contain-width">
-      <h1 className="font-branding logo">Holiday event</h1>
+      <h1 className="font-branding logo"><a href="/">Holiday event</a></h1>
       <nav className="site-navigation">
         <a className="site-navigation__link" href="#about">About</a>
         <a className="site-navigation__link" href="#hosts">Hosts</a>
