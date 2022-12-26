@@ -24,6 +24,8 @@ const Counter: React.FC<CounterProps> = ({ value, text }) => (
 
 /**
  * Component for displaying the countdown.
+ ** If it's more than 24 hours left it will display the remaining days, hours and minutes.
+ ** Otherwise it will display the remaining hours, minutes and seconds.
  * 
  * @component
  * @example
