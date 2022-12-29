@@ -1,0 +1,49 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60vh;
+  background-image: url("../../assets/chad-madden-SUTfFCAHV_A-unsplash.jpg");
+  background-color: blue;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: 40em) {
+    min-height: 90vh;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+
+    &__text {
+      font-size: 3rem;
+      color: var(--color-white);
+
+      @media (min-width: 40em) {
+        font-size: 5rem;
+      }
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        inset-inline: 0;
+        margin-inline: auto;
+        text-align: center;
+        content: "* * *";
+      }
+
+      &::before {
+        margin-block-start: -.75em;
+      }
+    }
+  }
+
+  .countdown {
+    width: 100%;
+    background-color: #DB050565;
+  }
+}
