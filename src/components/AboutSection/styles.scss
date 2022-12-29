@@ -1,6 +1,10 @@
 .about {
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   text-align: center;
+
+  &__title {
+    margin-block: 0 2rem;
+  }
 
   &__text {
     max-width: 80ch;
