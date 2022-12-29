@@ -14,9 +14,9 @@
   }
 
   &--secondary {
-    background-color: var(--color-gray);
+    background-color: var(--color-gray--500);
     color: var(--color-black);
-    border-color: var(--color-gray);
+    border-color: var(--color-gray--500);
 
     &:hover {
       filter: brightness(90%);
