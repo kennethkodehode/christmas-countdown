@@ -58,6 +58,10 @@ p {
   font-size: 2.25rem;
 }
 
+.h3 {
+  font-size: 1.5rem;
+}
+
 /* Media */
 img {
   max-width: 100%;
