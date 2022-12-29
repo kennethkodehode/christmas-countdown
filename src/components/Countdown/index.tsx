@@ -22,6 +22,10 @@ const Counter: React.FC<CounterProps> = ({ value, text }) => (
   </div>
 )
 
+interface CountdownProps {
+  className?: string
+}
+
 /**
  * Component for displaying the countdown.
  ** If it's more than 24 hours left it will display the remaining days, hours and minutes.
@@ -32,7 +36,7 @@ const Counter: React.FC<CounterProps> = ({ value, text }) => (
  * 
  * <Countdown />
  */
-const Countdown: React.FC = () => {
+const Countdown: React.FC<CountdownProps> = ({ className }) => {
   const now  = new Date()
   const then = new Date()
 
@@ -56,7 +60,7 @@ const Countdown: React.FC = () => {
   }, [])
 
   return (
-    <div className="countdown">
+    <div className={`countdown${className ? ' '+className : ''}`}>
       <p className="font-festive countdown__text">The festivities start in</p>
       <div className="countdown__counters">
         { 8.64e+7 < remaining && <Counter value={Math.floor(remaining / 8.64e+7)} text="Days" /> }
