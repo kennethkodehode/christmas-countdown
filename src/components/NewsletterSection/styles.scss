@@ -1,0 +1,100 @@
+.newsletter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 2rem;
+  gap: 1rem;
+  color: var(--color-white);
+
+  @media (min-width: 50em) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 8rem;
+    padding-block: 4rem;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    inset: 0;
+  }
+
+  &::before {
+    z-index: -1;
+    background-image: url('../../assets/kieran-white-SBdmQcW8qag-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  &::after {
+    z-index: -1;
+    background-color: var(--color-red);
+    opacity: .5;
+  }
+
+  &__title {
+    margin-block: 0;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-white);
+
+    @media (min-width: 50em) {
+      text-align: initial;
+    }
+  }
+
+  &__form {
+    display: grid;
+    width: 100%;
+    max-width: 20rem;
+
+    @media (min-width: 40em) {
+      grid-template-columns: minmax(15rem, 1fr) minmax(8rem, auto);
+      align-items: start;
+      width: initial;
+      max-width: initial;
+      gap: 0 1rem;
+    }
+
+    @media (min-width: 50em) {
+      grid-template-columns: minmax(20rem, 1fr) minmax(8rem, auto);
+    }
+
+    &__email-label {
+      font-size: .75rem;
+      margin-bottom: .25rem;
+
+      @media (min-width: 40em) {
+        grid-column: 1 / 3;
+      }
+    }
+
+    &__email,
+    &__submit {
+      padding: .5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: .125rem;
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+
+    &__submit {
+      margin-block-start: .5rem;
+      font-family: 'Roboto', serif;
+      font-weight: 500;
+      cursor: pointer;
+
+      @media (min-width: 40em) {
+        margin: 0;
+      }
+    }
+  }
+}
