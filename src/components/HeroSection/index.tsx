@@ -4,6 +4,13 @@ import Countdown from '../Countdown'
 
 import './styles.scss'
 
+/**
+ * Component for displaying the hero section.
+ * 
+ * @component
+ * @example
+ * <HeroSection />
+ */
 const HeroSection: React.FC = () => (
   <section className="hero">
     <div className="hero__content contain-width">

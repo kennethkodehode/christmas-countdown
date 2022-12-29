@@ -12,6 +12,19 @@ interface TicketProps {
   accolades: string[]
 }
 
+/**
+ * Component for displaying an event ticket.
+ * 
+ * @component
+ * @example
+ * <Ticket
+ *   name="foobar"
+ *   available={52}
+ *   emoji="🎅"
+ *   price={32}
+ *   accolades={['foo', 'bar', 'baz']}
+ * /> 
+ */
 const Ticket: React.FC<TicketProps> = ({
   name,
   available,
@@ -33,6 +46,13 @@ const Ticket: React.FC<TicketProps> = ({
   </div>
 )
 
+/**
+ * Component for displaying the tickets section.
+ * 
+ * @component
+ * @example
+ * <TicketsSection />
+ */
 const TicketsSection: React.FC = () => (
   <section className="tickets contain-width">
     <h2 className="h2 tickets__title">Tickets</h2>
