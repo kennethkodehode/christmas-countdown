@@ -9,6 +9,7 @@
   &__avatar {
     vertical-align: middle;
     width: calc(100% - .5rem);
+    max-width: 8rem;
     margin-block-end: .5rem;
     margin-inline: auto;
     aspect-ratio: 1;
