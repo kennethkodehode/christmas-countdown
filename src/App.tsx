@@ -6,6 +6,7 @@ import TicketsSection      from './components/TicketsSection'
 import NewsletterSection   from './components/NewsletterSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import SiteFooter          from './components/SiteFooter'
+import Copyright           from './components/Copyright'
 
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
       <NewsletterSection />
       <TestimonialsSection />
       <SiteFooter />
+      <Copyright />
     </div>
   )
 }
