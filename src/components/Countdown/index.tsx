@@ -63,10 +63,10 @@ const Countdown: React.FC<CountdownProps> = ({ className }) => {
     <div className={`countdown${className ? ' '+className : ''}`}>
       <p className="font-festive countdown__text">The festivities start in</p>
       <div className="countdown__counters">
-        { 8.64e+7 < remaining && <Counter value={Math.floor(remaining / 8.64e+7)} text="Days" /> }
+        <Counter value={Math.floor(remaining / 8.64e+7)} text="Days" />
         <Counter value={Math.floor(remaining % 8.64e+7 / 3.6e+6)} text="Hours"/>
-        <Counter value={Math.floor(remaining % 8.64e+7 % 3.6e+6 / 60000)} text="Minutes"/>
-        { 8.64e+7 >= remaining && <Counter value={Math.floor(remaining % 8.64e+7 % 3.6e+6 % 60000 / 1000)} text="Seconds"/> }
+        <Counter value={Math.floor(remaining % 3.6e+6 / 60000)} text="Minutes"/>
+        <Counter value={Math.floor(remaining % 60000 / 1000)} text="Seconds"/>
       </div>
     </div>
   )

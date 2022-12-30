@@ -55,15 +55,27 @@
     text-align: center;
     font-size: 2rem;
     
+    @media (min-width: 40em) {
+      font-size: 1.5rem;
+    }
+
     @media (min-width: 50em) {
       margin: 0;
+      font-size: 2rem;
+    }
+
+    @media (min-width: 64em) {
       font-size: 3rem;
     }
   }
 
   &__counters {
     display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
