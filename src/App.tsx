@@ -5,6 +5,7 @@ import HostsSection        from './components/HostsSection'
 import TicketsSection      from './components/TicketsSection'
 import NewsletterSection   from './components/NewsletterSection'
 import TestimonialsSection from './components/TestimonialsSection'
+import SiteFooter          from './components/SiteFooter'
 
 import './App.css'
 
@@ -18,6 +19,7 @@ function App() {
       <TicketsSection />
       <NewsletterSection />
       <TestimonialsSection />
+      <SiteFooter />
     </div>
   )
 }

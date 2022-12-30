@@ -1,0 +1,59 @@
+.site-footer {
+  display: grid;
+  gap: 1rem;
+  padding-block: 2rem;
+  background-color: var(--color-red);
+  color: var(--color-white);
+
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 50em) {
+    grid-template-columns: repeat(2, 1fr) repeat(2, minmax(0, auto));
+    justify-content: space-between;
+    gap: 8rem;
+  }
+
+  a {
+    color: var(--color-white);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    display: none;
+  }
+
+  &__widget {
+    &__title {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    &--text {
+      @media (min-width: 40em) {
+        grid-column: span 2;
+      }
+
+      p {
+        max-width: 60ch;
+      }
+    }
+
+    &--list {
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li + li {
+        margin-block-start: .5rem;
+      }
+    }
+  }
+}
