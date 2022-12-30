@@ -1,0 +1,20 @@
+.testimonials {
+  padding-block: 4rem;
+  background-color: var(--color-gray);
+  padding-inline: 1rem;
+
+  @media (min-width: 50em) {
+    padding-inline: calc((100% - 50em) / 2);
+  }
+
+  &__title {
+    margin-block-end: 4rem;
+    text-align: center;
+  }
+
+  .testimonial + .testimonial {
+    margin-block-start: 2rem;
+    padding-block-start: 2rem;
+    border-block-start: 1px solid var(--color-gray--500);
+  }
+}
