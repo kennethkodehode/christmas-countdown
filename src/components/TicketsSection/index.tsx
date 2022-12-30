@@ -54,7 +54,7 @@ const Ticket: React.FC<TicketProps> = ({
  * <TicketsSection />
  */
 const TicketsSection: React.FC = () => (
-  <section className="tickets contain-width">
+  <section id="tickets" className="tickets contain-width">
     <h2 className="h2 tickets__title">Tickets</h2>
 
     <Ticket

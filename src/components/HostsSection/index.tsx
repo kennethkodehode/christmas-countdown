@@ -44,7 +44,7 @@ const HostCard: React.FC<HostCardProps> = ({
   name,
   socialMediaLinks
 }) => (
-  <div className={`host-card${className ? ' '+className : ''}`}>
+  <div id="hosts" className={`host-card${className ? ' '+className : ''}`}>
     <img className="host-card__avatar" src={avatarURL} alt={name} />
     <span className="host-card__name">{name}</span>
     <ul className="host-card__social-links">
