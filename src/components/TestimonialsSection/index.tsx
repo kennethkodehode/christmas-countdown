@@ -21,7 +21,7 @@ const TestimonialsSection: React.FC = () => {
     <section className="testimonials">
       <h2 className="h2 testimonials__title">Testimonials</h2>
       
-      <h3 className="testimonials__sub-title"></h3>
+      <h3 className="testimonials__sub-title screen-reader-text">List of testimonials</h3>
       
       {testimonials.map((testimonial) => (<Testimonial
         key={testimonial.id}

@@ -10,7 +10,7 @@ import './styles.scss'
  */
 const SiteFooter: React.FC = () => (
   <footer className="site-footer contain-width">
-    <h2 className="site-footer__title">Site footer</h2>
+    <h2 className="site-footer__title screen-reader-text">Site footer</h2>
 
     <div className="site-footer__widget site-footer__widget--text">
       <h3 className="site-footer__widget__title">Holiday event</h3>
