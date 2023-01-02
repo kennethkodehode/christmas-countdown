@@ -77,7 +77,7 @@
     }
 
     &__email,
-    &__submit {
+    &__submit.button {
       padding: .5rem;
       font-size: 1rem;
       border: none;
@@ -88,10 +88,7 @@
 
     &__submit {
       margin-block-start: .5rem;
-      font-family: 'Roboto', serif;
-      font-weight: 500;
-      cursor: pointer;
-
+      
       @media (min-width: 40em) {
         margin: 0;
       }

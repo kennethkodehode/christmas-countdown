@@ -26,7 +26,7 @@ const NewsletterSection: React.FC = () => {
       <form className="newsletter__form" onSubmit={handleFormSubmit}>
         <label className="newsletter__form__email-label" html-for="newsletter-email">E-mail address</label>
         <input className="newsletter__form__email" id="newsletter-email" type="email" placeholder="name@domain.com" />
-        <input className="newsletter__form__submit" type="submit" value="Subscribe"/>
+        <input className="button newsletter__form__submit" type="submit" value="Subscribe"/>
       </form>
     </section>
   )

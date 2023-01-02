@@ -90,7 +90,7 @@ const TestimonialForm: React.FC = () => {
       />
 
       <input
-        className="testimonial-form__submit"
+        className="button testimonial-form__submit"
         type="submit"
         value="Submit"
       />

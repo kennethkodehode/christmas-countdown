@@ -20,8 +20,7 @@
   &__name,
   &__email,
   &__message-title,
-  &__message,
-  &__submit {
+  &__message {
     width: 100%;
     padding: .5rem;
     margin-bottom: 1rem;
@@ -58,13 +57,7 @@
   }
 
   &__submit {
-    width: initial;
     margin-block-start: 1rem;
-    padding-inline: 2rem;
-    font-weight: 500;
-    background-color: var(--color-red);
-    color: var(--color-white);
-    cursor: pointer;
 
     @media (min-width: 40em) {
       grid-column: 1;
