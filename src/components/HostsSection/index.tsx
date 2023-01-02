@@ -75,30 +75,33 @@ const HostsSection: React.FC = () => {
   return (
     <section className="hosts contain-width">
       <h2 className="h2 hosts__title">Hosts</h2>
-      <HostCard
-        className="hosts__card"
-        avatarURL={santaAvatar}
-        name={name}
-        socialMediaLinks={socialMediaLinks}
-      />
-      <HostCard
-        className="hosts__card"
-        avatarURL={santaAvatar}
-        name={name}
-        socialMediaLinks={socialMediaLinks}
-      />
-      <HostCard
-        className="hosts__card"
-        avatarURL={santaAvatar}
-        name={name}
-        socialMediaLinks={socialMediaLinks}
-      />
-      <HostCard
-        className="hosts__card"
-        avatarURL={santaAvatar}
-        name={name}
-        socialMediaLinks={socialMediaLinks}
-      />
+
+      <div className="hosts__hosts-container">
+        <HostCard
+          className="hosts__card"
+          avatarURL={santaAvatar}
+          name={name}
+          socialMediaLinks={socialMediaLinks}
+        />
+        <HostCard
+          className="hosts__card"
+          avatarURL={santaAvatar}
+          name={name}
+          socialMediaLinks={socialMediaLinks}
+        />
+        <HostCard
+          className="hosts__card"
+          avatarURL={santaAvatar}
+          name={name}
+          socialMediaLinks={socialMediaLinks}
+        />
+        <HostCard
+          className="hosts__card"
+          avatarURL={santaAvatar}
+          name={name}
+          socialMediaLinks={socialMediaLinks}
+        />
+      </div>
     </section>
   )
 }
