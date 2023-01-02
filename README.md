@@ -1,5 +1,7 @@
 # Holiday event
 
+![screenshot](screenshot.jpg)
+
 ## About
 Holiday event is a template for building event sites related to the winter holidays.
 
