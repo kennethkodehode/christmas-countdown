@@ -76,18 +76,11 @@
       }
     }
 
-    &__email,
     &__submit.button {
-      padding: .5rem;
-      font-size: 1rem;
-      border: none;
+      margin-block-start: .5rem;
       border-radius: .125rem;
       background-color: var(--color-white);
       color: var(--color-black);
-    }
-
-    &__submit {
-      margin-block-start: .5rem;
       
       @media (min-width: 40em) {
         margin: 0;
