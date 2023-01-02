@@ -15,7 +15,7 @@ import './styles.scss'
  * <TestimonialsSection />
  */
 const TestimonialsSection: React.FC = () => {
-  const { testimonials } = useTestimonials()
+  const [ testimonials, setTestimonials ] = useTestimonials()
 
   return (
     <section id="testimonials" className="testimonials">
@@ -32,7 +32,7 @@ const TestimonialsSection: React.FC = () => {
         timestamp={testimonial.timestamp}
       />))}
 
-      <TestimonialForm />
+      <TestimonialForm testimonials={testimonials} setTestimonials={setTestimonials} />
     </section>
   )
 }

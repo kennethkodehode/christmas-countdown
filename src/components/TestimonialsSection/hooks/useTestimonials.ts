@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { v4 } from 'uuid'
 
 export interface Testimonial {
@@ -17,7 +17,7 @@ export interface Testimonial {
  * @example
  * const { testimonials, setTestemonials } = useTestimonials()
  */
-const useTestimonials = () => {
+const useTestimonials = (): [Testimonial[], React.Dispatch<React.SetStateAction<Testimonial[]>>] => {
   const initialTestimonials: Testimonial[] = [
     {
       id:        v4(),
@@ -37,7 +37,7 @@ const useTestimonials = () => {
     }
   ]
   const storedTestimonials = localStorage.getItem('testimonials')
-  const [ testimonials, setTestemonials ] = useState<Testimonial[]>(
+  const [ testimonials, setTestimonials ] = useState<Testimonial[]>(
     storedTestimonials
       ? JSON.parse(storedTestimonials)
       : initialTestimonials
@@ -47,10 +47,10 @@ const useTestimonials = () => {
     localStorage.setItem('testimonials', JSON.stringify(testimonials))
   }, [testimonials])
 
-  return {
+  return [
     testimonials,
-    setTestemonials
-  }
+    setTestimonials
+  ]
 }
 
 export default useTestimonials

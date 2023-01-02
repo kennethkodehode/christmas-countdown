@@ -1,9 +1,14 @@
 import React from 'react'
 import { v4 } from 'uuid'
 
-import useTestimonials from '../../hooks/useTestimonials'
+import type { Testimonial } from '../../hooks/useTestimonials'
 
 import './styles.scss'
+
+interface TestimonialFormProps {
+  testimonials: Testimonial[]
+  setTestimonials: React.Dispatch<React.SetStateAction<Testimonial[]>>
+}
 
 /**
  * Component for displaying the Testimonials section.
@@ -12,8 +17,10 @@ import './styles.scss'
  * @example
  * <TestimonialsSection />
  */
-const TestimonialForm: React.FC = () => {
-  const { testimonials, setTestemonials } = useTestimonials()
+const TestimonialForm: React.FC<TestimonialFormProps> = ({
+  testimonials,
+  setTestimonials
+}) => {
 
   /**
    * Handles submission of new testimonial.
@@ -26,7 +33,7 @@ const TestimonialForm: React.FC = () => {
     const target = e.target as HTMLFormElement
     const data = new FormData(target)
     
-    setTestemonials([
+    setTestimonials([
       ...testimonials,
       {
         id:        v4(),
