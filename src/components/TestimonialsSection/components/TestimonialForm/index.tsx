@@ -53,7 +53,7 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({
       <h3 className="h3 testimonial-form__title">Add a Testimonial</h3>
       
       <label
-        html-for="testimonial-name"
+        htmlFor="testimonial-name"
         className="testimonial-form__name-label"
       >Name</label>
       <input
@@ -66,7 +66,7 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({
       />
 
       <label
-        html-for="testimonial-email"
+        htmlFor="testimonial-email"
         className="testimonial-form__email-label"
       >E-mail address</label>
       <input
@@ -78,7 +78,7 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({
         required
       />
 
-      <label html-for="testimonial-message-title">Title</label>
+      <label htmlFor="testimonial-message-title">Title</label>
       <input
         id="testimonial-message-title"
         className="testimonial-form__message-title"
@@ -87,7 +87,7 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({
         required
       />
 
-      <label html-for="testimonial-message">Message</label>
+      <label htmlFor="testimonial-message">Message</label>
       <textarea
         id="testimonial-message"
         className="testimonial-form__message"
